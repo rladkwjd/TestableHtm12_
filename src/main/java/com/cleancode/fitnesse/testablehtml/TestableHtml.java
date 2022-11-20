@@ -8,16 +8,16 @@ public class TestableHtml {
         if(isTest){
             WikiPage testPage = pageData.getWikiPage();
             StringBuffer newPageContent = new StringBuffer();
-            includeSetupPages(testPage, newPageContent, includeSuiteSetup);
+            includeSetup(testPage, newPageContent, includeSuiteSetup);
             newPageContent.append(pageData.getContent());
-            includeTeardownPages(testPage, newPageContent, includeSuiteSetup);
+            includeTeardown(testPage, newPageContent, includeSuiteSetup);
             pageData.setContent(newPageContent.toString());
         }
         return pageData.getHtml();
     }
 
-    private void includeTeardownPages(WikiPage testPage, StringBuffer newPageContent, boolean includeSuiteSetup) {
+    private void includeTeardown(WikiPage testPage, StringBuffer newPageContent, boolean includeSuiteSetup) {
     }
-    private void includeSetupPages(WikiPage testPage, StringBuffer newPageContent, boolean includeSuiteSetup) {
+    private void includeSetup(WikiPage testPage, StringBuffer newPageContent, boolean includeSuiteSetup) {
     }
 }
